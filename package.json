@@ -1,0 +1,30 @@
+{
+    "name": "blender_mcp_server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc && chmod 755 build/index.js",
+        "server:dev": "node ./build/index.js",
+        "server:dev:inspector": "npx @modelcontextprotocol/inspector npm run server:dev"
+    },
+    "bin": {
+        "blender_mcp_server": "./build/index.js"
+    },
+    "files": [
+        "build"
+    ],
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.17.2",
+        "zod": "^3.25.76"
+    },
+    "devDependencies": {
+        "@types/node": "^24.2.1",
+        "typescript": "^5.9.2"
+    }
+}
