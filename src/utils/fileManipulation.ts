@@ -18,7 +18,8 @@ export default function createPythonFile(
     let finalPath = fullPath || defaultPath;
 
     if (fullPath && ext === "") {
-        const scriptTitle = `video_script_${crypto.randomUUID()}.py`;
+        // const scriptTitle = `video_script_${crypto.randomUUID()}.py`;
+        const scriptTitle = `main.py`;
         finalPath = path.join(fullPath, scriptTitle);
     }
 
