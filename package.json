@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc && chmod 755 build/index.js",
         "server:dev": "node ./build/index.js",
-        "server:dev:inspector": "npx @modelcontextprotocol/inspector npm run server:dev"
+        "server:dev:inspector": "npx @modelcontextprotocol/inspector npm run server:dev",
+        "server:build:inspector": "npm run build && set DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector node ./build/index.js"
     },
     "bin": {
         "blender_mcp_server": "./build/index.js"
